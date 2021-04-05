@@ -68,7 +68,7 @@ class RestaurantServiceTest {
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     @Test
-    public void total_value_of_order_should_be_returned(){
+    public void total_value_of_order_should_be_returned() throws restaurantNotFoundException {
         String[] itemNames = new String[]{"Sweet corn soup","Vegetable lasagne"};
         Double orderAmount = service.findTotalAmount(restaurant,itemNames);
         assertNotNull(orderAmount);
